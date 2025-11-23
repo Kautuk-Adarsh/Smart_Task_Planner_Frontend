@@ -1,9 +1,9 @@
-import { GoalRequest,TaskPlan } from "./types";
-const BACKEND_URL = 'http://127.0.0.1:8000/api/v1/plans';
+import { GoalRequest, TaskPlan } from "./types";
+const ENDPOINT_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api/v1/plans';
 
 export async function createPlan(goal: GoalRequest): Promise<TaskPlan> {
 
-  const response = await fetch(BACKEND_URL, {
+  const response = await fetch(ENDPOINT_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

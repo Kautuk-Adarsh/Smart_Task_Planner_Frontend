@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import GoalForm from './components/GoalForm';
-// Assuming you have defined the TypeScript types in 'lib/types.ts'
 import { TaskPlan } from '../lib/types'; 
 import TaskPlanDisplay from './components/TaskPlanDisplay'
 
@@ -11,7 +10,6 @@ export default function Home() {
 
   const handlePlanGenerated = (plan: TaskPlan) => {
     setCurrentPlan(plan);
-    // Scroll to the results for a better UX
     document.getElementById('plan-display-area')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -24,7 +22,7 @@ export default function Home() {
       <header className="text-center mb-10">
         <h1 className="text-4xl font-extrabold text-gray-900">Smart Task Planner</h1>
         <p className="text-lg text-gray-600 mt-2">
-          Break down any goal into actionable tasks and timelines using Gemini AI.
+          Break down any goal into actionable tasks and timelines .
         </p>
       </header>
 
